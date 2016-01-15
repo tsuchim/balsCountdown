@@ -1,6 +1,6 @@
 var kana = "アイウエオカキクケコガギグゲゴサシスセソザジズゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペポマミムメモヤユヨラリルレロワヰヱヲン";
 var bals = "バルス";
-var btime = new Date("2016/1/15 23:22:34");
+var btime = new Date("2016/1/15 23:23:17");
 // var btime = new Date("2016/1/5 15:56:00");
 var bCode = 0;
 for( var i=0 ; i < bals.length ; i++ ) { bCode = bCode*kana.length + kana.indexOf( bals.substr(i,1)); }
