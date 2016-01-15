@@ -5,25 +5,29 @@
     <meta http-equiv="content-language" content="ja" />
     <meta name="viewport" content="width=320px;initial-scale:1" />
     <title>カウントダウン・ザ・バルス</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="bals.js"></script>
     <link rel="stylesheet" type="text/css" href="bals.css">
+    <script>
+     $(function(){
+       $('body').bind('touchstart mousedown', function(e) {
+	 $("#lightning").stop().animate({ "opacity" : "0.7" }, 100 ).animate( {"opacity" : "0" } , 100);
+       });
+      });
+    </script>
   </head>
   <body>
-    <div class="background">
-      <div class="transparent">
-	<div class="contents">
-	  <h1>カウントダウン・ザ・バルス 2016</h1>
-	  <div id="bals">　　　</div>
-	  <!-- <div>カウントダウン・ザ・バルス 2016は、2016年1月15日のバルスに合わせて作られました。次回のバルスをお楽しみに。</div> -->
-	</div>
-      </div>
+    <div id="lightning">
+    </div>
+    <div class="contents">
+      <h1>カウントダウン・ザ・バルス 2016</h1>
+      <div id="bals">　　　</div>
+      <!-- <div>カウントダウン・ザ・バルス 2016は、2016年1月15日のバルスに合わせて作られました。次回のバルスをお楽しみに。</div> -->
     </div>
     <div id="footer">
       日本テレビ・スタジオジブリ等とは全く関係ありません。<br>
-      <a href="https://twitter.com/tsuchim">@tsuchim</a> / デザイナ募集中 / <a href="https://commons.wikimedia.org/wiki/File:Wagga-Cumulonimbus.jpg">画像ソース</a>
+      <a href="https://twitter.com/tsuchim">@tsuchim</a> / デザイナ募集中 / <a href="https://commons.wikimedia.org/wiki/File:Wagga-Cumulonimbus.jpg">画像ソース</a> / <a href="https://pixabay.com/ja/%E7%A8%B2%E5%A6%BB-%E5%B5%90-%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1-%E7%A9%BA-%E9%9B%B7-%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AD-%E3%83%9C%E3%83%AB%E3%83%88-%E9%9B%BB%E6%B0%97-399853/">雷画像ソース</a>
     </div>
   </body>
   <!-- 前回のバルス 2009-23:21:13 / 2011(sp)-23:22:34 / 2013-23:21:50 -->
 </html>
-

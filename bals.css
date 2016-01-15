@@ -2,14 +2,42 @@
 body { margin:0; padding:0; }
 h1 { text-align:center; font-size: 20pt }
 div#bals { height:auto; font-size:64pt; text-align:center; font-family: monospace; }
-div#footer { position:fixed; margin:0px; padding:0px; width:100%; background-color:#AAA; bottom:0px; left:0px; font-size:8pt; text-align:center; }
-div.background {
-    position: fixed;
-    width:100%; height: 100%;
-    background-image: url(bg.jpeg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    -moz-background-size:cover; background-size:cover;
+
+div#footer {
+    position:fixed;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background-color:#AAA;
+    bottom:0px;
+    left:0px;
+    font-size:8pt;
+    text-align:center;
+    z-index : 100;
 }
-div.transparent { background-color:rgba(255,255,255,0.5); margin-top:40px; }
-div.contents { padding:20px; color:#000; }
+
+body {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background-image: url(bg.jpeg);
+    -moz-background-size:cover;
+    background-size:cover;
+}
+
+div.contents {
+    padding:20px;
+    color:#000;
+    background-color:rgba(255,255,255,0.5);
+    margin-top:40px;
+    z-index : 1;
+}
+
+div#lightning{
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    background-image : url( "lightning.jpg" );
+    opacity : 0;
+    z-index : 10;
+}
