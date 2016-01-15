@@ -8,6 +8,26 @@ $(document).ready(function(){
     var intervalID = window.setInterval( clocktimer, 1000 );
 });
 
+var showLigtning = function( strength ){
+    if( strength == 1 ){
+	$("#lightning").stop().animate({ "opacity" : "0.7" }, 400 ).animate( {"opacity" : "0" } , 200);
+    }
+    if( strength == 100 ){
+	$("#lightning").stop().animate({ "opacity" : "1" }, 100 ).animate( {"opacity" : "0" }, 100 ).animate({ "opacity" : "1" }, 100 ).animate( {"opacity" : "0" }, 100 ).animate({ "opacity" : "1" }, 100 ).animate( {"opacity" : "0" }, 100 ).animate({ "opacity" : "1" }, 100 ).animate( {"opacity" : "0" }, 100 );
+    }
+}
+
+var strengthOfText = function( text ){
+    if( text == "バルス" ){
+	return 100;
+    }
+
+    if( text.match( /[バルス]/ ) ){
+	return 1;
+    }
+    return 0;
+}
+
 function clocktimer() {
     var t = new Date();
     var n = bCode + Math.floor( ( t.getTime() - btime.getTime() ) / 1000 );
@@ -17,7 +37,9 @@ function clocktimer() {
 	s = kana.substr( n % kana.length, 1 ) + s;
 	n = n / kana.length;
     }
-
-
+    var strength = strengthOfText(s);
+    if( strength != 0 ){
+	showLigtning( strength );
+    }
     $("#bals").html( s );
 };
