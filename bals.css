@@ -18,13 +18,13 @@ div#footer {
 
 body {
     position: fixed;
-    width:100%; height: 100%;
+    width:100%;
+    height: 100%;
     background-image: url(bg.jpeg);
-    background-repeat: no-repeat;
-    background-position: top center;
     -moz-background-size:cover;
     background-size:cover;
 }
+
 div.contents {
     padding:20px;
     color:#000;
